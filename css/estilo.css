@@ -1,0 +1,208 @@
+/* Variables CSS para colores */
+:root {
+    --main-bg-color: #f4f4f4;
+    --header-bg-color: orange;
+    --text-color: #333;
+    --button-bg-color: #333;
+    --button-hover-bg-color: #555;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    color: black;
+}
+
+/* Estilos del encabezado */
+header {
+    background: var(--header-bg-color);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    width: 100%; /* Usar el 100% para mejor adaptabilidad */
+    max-width: 480px; /* Limitar el ancho máximo */
+    height: 270px; /* Altura proporcional para 16:9 */
+    border: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    display: none; /* Ocultar en pantallas grandes */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos de la sección */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow);
+    text-align: center;
+}
+
+section h1 {
+    margin-bottom: 15px;
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.image-item {
+    text-align: center;
+    margin: 15px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow);
+    padding: 10px;
+    width: 250px;
+}
+
+.image-item img {
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos del formulario */
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 15px;
+    background: var(--button-bg-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--button-hover-bg-color);
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background: var(--button-bg-color);
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el menú en pantallas pequeñas */
+    }
+    
+    ul {
+        display: none; /* Ocultar el menú */
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #menu.show {
+        display: flex; /* Mostrar el menú al hacer clic */
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    .image-container {
+        justify-content: center; /* Centrar en pantallas pequeñas */
+    }
+}
+
+/* Estilos generales para la lista de redes sociales */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #007bff; /* Cambiar color al pasar el mouse */
+}
